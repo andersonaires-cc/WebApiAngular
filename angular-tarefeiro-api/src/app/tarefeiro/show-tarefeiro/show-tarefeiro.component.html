@@ -1,0 +1,17 @@
+<table class="table table-striped">
+  <thead>
+    <th>Id</th>
+    <th>Tipos de Tarefa</th>
+    <th>Status</th>
+    <th>Comentário</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of tarefeiroList$|async">
+      <td>{{item.id}}</td>
+      <td>{{item.tarefaTipoId}}</td>
+      <td>{{item.status}}</td>
+      <td>{{item.comentario}}</td>
+    </tr>
+  </tbody>
+</table>
+
