@@ -20,6 +20,8 @@ export class ShowTarefeiroComponent implements OnInit {
 
   ngOnInit(): void{
     this.tarefeiroList$ = this.service.getTarefaList();
+    this.tarefeiroTiposList$ = this.service.getTarefaTiposList();
+
   }
 
 }
