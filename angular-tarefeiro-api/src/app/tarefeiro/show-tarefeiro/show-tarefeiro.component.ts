@@ -25,6 +25,12 @@ export class ShowTarefeiroComponent implements OnInit {
 
   }
 
+  //variaveis (propriedades)
+  modalTitle:string = '';
+  activateAddEditTarefeiroComponent: boolean=false;
+  tarefeiro:any;
+
+
   refreshTarefeiroTiposMap(){
     this.service.getTarefaTiposList().subscribe(data =>{
       this.tarefeiroTiposList = data;
