@@ -31,19 +31,19 @@ export class TarefeiroApiService {
   //Tarefas Tipos
 
   getTarefaTiposList(): Observable<any[]>{
-    return this.http.get<any>(this.tarefeiroAPIUrl + '/tarefasTipos');
+    return this.http.get<any>(this.tarefeiroAPIUrl + '/tarefaTipos');
   }
 
   addTarefaTipos(data:any){
-    return this.http.post(this.tarefeiroAPIUrl + '/tarefasTipos', data);
+    return this.http.post(this.tarefeiroAPIUrl + '/tarefaTipos', data);
   }
 
   updateTarefaTipos(id: number|string,data:any){
-    return this.http.put(this.tarefeiroAPIUrl + `/tarefasTipos/${id}`,data);
+    return this.http.put(this.tarefeiroAPIUrl + `/tarefaTipos/${id}`,data);
   }
 
   deleteTarefaTipos(id:number|string){
-    return this.http.delete(this.tarefeiroAPIUrl + `/tarefasTipos/${id}`);
+    return this.http.delete(this.tarefeiroAPIUrl + `/tarefaTipos/${id}`);
   }
 
   //Status

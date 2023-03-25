@@ -1,3 +1,14 @@
+
+<!-- Button trigger modal -->
+<button type="button " class="btn btn-secondary float-end m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Show Tipos de Tarefas
+</button>
+
+<!-- Button Add modal -->
+<button type="button" class="btn btn-primary float-end m-2" data-bs-toggle="modal" data-bs-target="#exampleModalNova">
+  Nova Tarefa
+</button>
+
 <table class="table table-striped">
   <thead>
     <th>Id</th>
@@ -8,17 +19,14 @@
   <tbody>
     <tr *ngFor="let item of tarefeiroList$|async">
       <td>{{item.id}}</td>
-      <td>{{item.tarefaTipoId}}</td>
+      <td>{{tarefeiroTiposMap.get(item.tarefaTipoId)}}</td>
+      <!-- <td>{{item.tarefaTipoId}}</td> -->
       <td>{{item.status}}</td>
       <td>{{item.comentario}}</td>
     </tr>
   </tbody>
 </table>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Show Tipos de Tarefas
-</button>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -35,3 +43,17 @@
   </div>
 </div>
 
+
+<!-- Add Modal Tarefa -->
+<div class="modal fade" id="exampleModalNova" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+  </div>
+</div>
