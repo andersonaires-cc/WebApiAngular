@@ -5,7 +5,8 @@
 </button>
 
 <!-- Button Add modal -->
-<button type="button" class="btn btn-primary float-end m-2" data-bs-toggle="modal" data-bs-target="#exampleModalNova">
+<button type="button" class="btn btn-primary float-end m-2" data-bs-toggle="modal" data-bs-target="#exampleModalNova"
+  (click)="modalAdd()">
   Nova Tarefa
 </button>
 
@@ -53,7 +54,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <app-add-edit-tarefeiro></app-add-edit-tarefeiro>
+        <app-add-edit-tarefeiro [tarefa]="tarefeiro" *ngIf="activateAddEditTarefeiroComponent"></app-add-edit-tarefeiro>
       </div>
   </div>
 </div>
