@@ -1,10 +1,21 @@
 <form>
-  <label for="tarefaTipoId" class="form-label">Tipo de Tarefa</label>
-  <select name="tarefaTipoId" id="tarefaTipoId" class="form-control"
-    [(ngModel)]="tarefaTipoId" *ngIf="tarefa.id==0">
-    <option  *ngFor="let tipo of tarefaTipoList$|async"
-    value="tipo.id">
-    {{tipo.tarefaNome}}
-    </option>
-  </select>
+  <div class="mb-3">
+    <label for="tarefaTipoId" class="form-label">Tipo de Tarefa</label>
+    <select name="tarefaTipoId" id="tarefaTipoId" class="form-control"
+      [(ngModel)]="tarefaTipoId" *ngIf="tarefa.id==0">
+      <option  *ngFor="let tipo of tarefaTipoList$|async"
+      value="tipo.id">
+      {{tipo.tarefaNome}}
+      </option>
+    </select>
+  </div>
+  <div class="mb3">
+    <label for="status" class="form-label">Status</label>
+    <select name="status" id="status" class="form-control" [(ngModel)]="status">
+      <option *ngFor="let status of statusList$|async" value="status.Opcao"></option>
+    </select>
+  </div>
+  <div class="mb3">
+    <label for="comentario" class="form-label">Comentário</label>
+  </div>
 </form>
