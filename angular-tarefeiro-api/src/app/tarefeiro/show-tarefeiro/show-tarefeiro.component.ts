@@ -41,6 +41,10 @@ export class ShowTarefeiroComponent implements OnInit {
     this.activateAddEditTarefeiroComponent = true;
   }
 
+  modalClose(){
+    this.activateAddEditTarefeiroComponent = false;
+    this.tarefeiroList$ = this.service.getTarefaList();
+  }
 
   refreshTarefeiroTiposMap(){
     this.service.getTarefaTiposList().subscribe(data =>{

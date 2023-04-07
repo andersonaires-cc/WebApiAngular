@@ -33,4 +33,33 @@ export class AddEditTarefeiroComponent implements OnInit{
     this.tarefaList$ = this.service.getTarefaList();
   }
 
+  addTarefa(){
+    var tarefa = {
+      status: this.status,
+      comentario: this.comentario,
+      tarefaTipoId:this.tarefaTipoId
+    }
+    this.service.addTarefa(tarefa).subscribe(res =>{
+      var closeModalBtn = document.getElementById('add-edit-modal-close');
+      if (closeModalBtn) {
+        closeModalBtn.click();
+      }
+      var showAddSuccess = document.getElementById('add-success-alert');
+      if (showAddSuccess) {
+        showAddSuccess.style.display = "block";
+      }
+
+      setTimeout(function(){
+        if (showAddSuccess) {
+          showAddSuccess.style.display = "none";
+        }
+      },4000)
+
+    })
+
+  }
+  updateTarefa(){
+
+  }
+
 }
