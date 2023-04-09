@@ -41,6 +41,12 @@ export class ShowTarefeiroComponent implements OnInit {
     this.activateAddEditTarefeiroComponent = true;
   }
 
+  modalEdit(item:any){
+    this.tarefeiro = item;
+    this.modalTitle = "Edição de Tarefa";
+    this.activateAddEditTarefeiroComponent = true;
+  }
+
   modalClose(){
     this.activateAddEditTarefeiroComponent = false;
     this.tarefeiroList$ = this.service.getTarefaList();
