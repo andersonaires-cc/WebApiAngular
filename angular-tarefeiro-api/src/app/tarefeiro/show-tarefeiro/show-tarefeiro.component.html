@@ -61,9 +61,9 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">{{modalTitle}}</h1>
+        <h5 class="modal-title fs-5" id="exampleModalLabel">{{modalTitle}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
-        (click)="modalClose()" id="add-edit-tarefeiro"></button>
+        (click)="modalClose()" id="add-edit-modal-close"></button>
       </div>
       <div class="modal-body">
         <app-add-edit-tarefeiro [tarefa]="tarefeiro" *ngIf="activateAddEditTarefeiroComponent"></app-add-edit-tarefeiro>

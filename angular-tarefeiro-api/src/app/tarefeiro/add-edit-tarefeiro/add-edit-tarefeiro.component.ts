@@ -46,14 +46,14 @@ export class AddEditTarefeiroComponent implements OnInit{
       }
       var showAddSuccess = document.getElementById('add-success-alert');
       if (showAddSuccess) {
-        showAddSuccess.style.display = "block";
+        showAddSuccess.style.display = 'block';
       }
 
       setTimeout(function(){
         if (showAddSuccess) {
-          showAddSuccess.style.display = "none";
+          showAddSuccess.style.display = 'none';
         }
-      },4000)
+      },4000);
 
     })
 
