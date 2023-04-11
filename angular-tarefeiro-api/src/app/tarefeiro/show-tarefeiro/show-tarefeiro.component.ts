@@ -10,7 +10,7 @@ import { TarefeiroApiService } from 'src/app/tarefeiro-api.service';
 export class ShowTarefeiroComponent implements OnInit {
 
   tarefeiroList$!:Observable<any[]>;
-  tarefeiroTiposList$!:Observable<any[]>;
+  tarefeiroTipoList$!:Observable<any[]>;
   tarefeiroTiposList:any=[];
 
   //map para mostrar a associação entre as tabelas (FK)
@@ -20,7 +20,7 @@ export class ShowTarefeiroComponent implements OnInit {
 
   ngOnInit(): void{
     this.tarefeiroList$ = this.service.getTarefaList();
-    this.tarefeiroTiposList$ = this.service.getTarefaTiposList();
+    this.tarefeiroTipoList$ = this.service.getTarefaTiposList();
     this.refreshTarefeiroTiposMap();
 
   }

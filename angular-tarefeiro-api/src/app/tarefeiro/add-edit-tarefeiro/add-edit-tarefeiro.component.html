@@ -1,16 +1,18 @@
 <form>
   <div class="mb-3">
-    <label for="tarefaTipoId" class="form-label">Tipo de Tarefa</label>
+    <label for="tarefaTipoId" class="form-label">Tipo de Tarefa </label>
 
    <input type="text" class="form-control" name="tarefaTipoId" [(ngModel)]="tarefaTipoId"
-      *ngIf="tarefa.id!=0" disabled>
+      *ngIf="tarefa.id !=0" disabled>
 
     <select name="tarefaTipoId" id="tarefaTipoId" class="form-control"
       [(ngModel)]="tarefaTipoId" *ngIf="tarefa.id==0">
+
       <option  *ngFor="let tipo of tarefaTipoList$|async"
       [value]="tipo.id">
       {{tipo.tarefaNome}}
       </option>
+
     </select>
   </div>
   <div class="mb-3">
@@ -23,7 +25,7 @@
     <label for="comentario" class="form-label">Comentário</label>
     <input type="text" class="form-control" [(ngModel)]="comentario" name="comentario">
   </div>
-  <button (click)="addTarefa()" *ngIf="tarefa.id==0" class="btn btn-primary">
+  <button (click)="addTarefa()" *ngIf="tarefa.id == 0" class="btn btn-primary">
     Add
   </button>
   <button (click)="updateTarefa()" *ngIf="tarefa.id!=0" class="btn btn-primary">
