@@ -46,18 +46,19 @@ export class AddEditTarefeiroComponent implements OnInit{
       }
       var showAddSuccess = document.getElementById('add-success-alert');
       if (showAddSuccess) {
-        showAddSuccess.style.display = 'block';
+        showAddSuccess.style.display = "block";
       }
 
       setTimeout(function(){
         if (showAddSuccess) {
-          showAddSuccess.style.display = 'none';
+          showAddSuccess.style.display = "none";
         }
       },4000);
 
     })
 
   }
+
   updateTarefa(){
     var tarefa = {
       id: this.id,
@@ -73,12 +74,12 @@ export class AddEditTarefeiroComponent implements OnInit{
       }
       var showUpdateSuccess = document.getElementById('update-success-alert');
       if (showUpdateSuccess) {
-        showUpdateSuccess.style.display = 'block';
+        showUpdateSuccess.style.display = "block";
       }
 
       setTimeout(function(){
         if (showUpdateSuccess) {
-          showUpdateSuccess.style.display = 'none';
+          showUpdateSuccess.style.display = "none";
         }
       },4000);
 
