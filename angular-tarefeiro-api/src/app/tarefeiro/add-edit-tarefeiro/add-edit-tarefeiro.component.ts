@@ -27,7 +27,7 @@ export class AddEditTarefeiroComponent implements OnInit{
     this.id = this.tarefa.id;
     this.status = this.tarefa.status;
     this.comentario = this.tarefa.comentario;
-    this.tarefaTipoId = this.tarefaTipoId;
+    this.tarefaTipoId = this.tarefa.tarefaTipoId;
     this.statusList$ = this.service.getStatusList();
     this.tarefaTipoList$ = this.service.getTarefaTiposList();
     this.tarefaList$ = this.service.getTarefaList();
